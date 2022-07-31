@@ -44,17 +44,18 @@ Save this as docker-compose.yaml:
 version: '3.3'
 
 services:
-  mysql:
-    image: mariadb
+  mariadb:
+    image: mariadb:10.7
     ports:
       - 3306:3306
     volumes:
-      -  /data/mysql:/var/lib/mysql
+      - ~/apps/mariadb:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=S3cret
       - MYSQL_PASSWORD=An0thrS3crt
       - MYSQL_USER=citizix_user
       - MYSQL_DATABASE=citizix_db
+    restart: on-failure
 ```
 Now bring up the containers:
 ```
