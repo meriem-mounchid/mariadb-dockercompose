@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  mariadb:
+    image: mariadb:10.7
+    ports:
+      - 3306:3306
+    volumes:
+      - /data/mariadb:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=misaki
+      - MYSQL_PASSWORD=test
+      - MYSQL_USER=user1
+      - MYSQL_DATABASE=misakidb
+    restart: on-failure
