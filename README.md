@@ -18,11 +18,11 @@ docker-compose --version
 ### Using Docker Run Command To Create MariaDB
 Create data dir:
 ```
-sudo mkdir -p /data/mariadb
+mkdir -p ~/apps/mariadb/data
 ```
 Run the container
 ```
-docker run -d --name my-mariadb -p 3306:3306 -v /data/mariadb:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=S3cret -e MYSQL_PASSWORD=An0thrS3crt -e MYSQL_USER=citizix_user  -e MYSQL_DATABASE=citizix_db mariadb
+docker run -d --name my-mariadb -p 3306:3306 -v ~/apps/mariadb/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=S3cret -e MYSQL_PASSWORD=An0thrS3crt -e MYSQL_USER=citizix_user  -e MYSQL_DATABASE=citizix_db mariadb
 ```
 <img width="1184" alt="Screen Shot 2022-07-31 at 5 13 21 PM" src="https://user-images.githubusercontent.com/43518207/182035476-8537260d-086e-462a-aa4e-caa025dcf4c5.png">
 
@@ -70,4 +70,6 @@ The commands:
 ```
 Verify the container processes using `docker-compose ps` :
 <img width="810" alt="Screen Shot 2022-07-31 at 11 52 05 AM" src="https://user-images.githubusercontent.com/43518207/182035122-14a1b447-9c36-4ac4-bc2e-a2456a2f6cac.png">
+To login to the container and login to Mariadb, use this:
+<img width="649" alt="Screen Shot 2022-07-31 at 5 40 35 PM" src="https://user-images.githubusercontent.com/43518207/182036536-296551b1-8de1-4396-bc76-85073a2df619.png">
 
