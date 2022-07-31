@@ -51,10 +51,10 @@ services:
     volumes:
       -  /data/mysql:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=rootpassword
-      - MYSQL_PASSWORD=yesmylady
-      - MYSQL_USER=misaki
-      - MYSQL_DATABASE=misakidb
+      - MYSQL_ROOT_PASSWORD=S3cret
+      - MYSQL_PASSWORD=An0thrS3crt
+      - MYSQL_USER=citizix_user
+      - MYSQL_DATABASE=citizix_db
 ```
 Now bring up the containers:
 ```
